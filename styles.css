@@ -1,0 +1,38 @@
+/* Hide native text caret — our JS cursor replaces it */
+.markdown-source-view.mod-cm6 .cm-content {
+	caret-color: transparent;
+}
+
+/* Disable all cursor layer animation (blink) */
+.cm-editor > .cm-scroller > .cm-cursorLayer {
+	animation: none !important;
+}
+
+/* Disable cursor movement transition */
+.cm-editor .cm-cursor {
+	transition: none !important;
+	/* iA Writer-style width */
+	border-left-width: 3px;
+	margin-left: -1px;
+}
+
+/* Light theme: black cursor */
+.theme-light .cm-cursor {
+	border-left-color: #000;
+}
+
+/* Dark theme: white cursor */
+.theme-dark .cm-cursor {
+	border-left-color: #fff;
+}
+
+/* Table cell: hide the inner cursor layer (main view renders the cursor) */
+.table-cell-wrapper .cm-cursorLayer {
+	display: none;
+}
+
+/* Show cursor when over a table cell or while pointing */
+.cm-cursorLayer.cm-overTableCell .cm-cursor,
+.cm-hasTablePointed .cm-cursorLayer .cm-cursor {
+	display: block;
+}
