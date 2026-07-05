@@ -17,3 +17,12 @@ Puis **Paramètres → Communauté → Plugins tiers** : activer **Eink Cursor**
 Aucun réglage : active le plugin, c’est tout.
 
 Ne pas utiliser en parallèle avec un autre plugin qui remplace le curseur (ex. Animated Cursor).
+
+## Catalogue Obsidian
+
+- **ID plugin** : `eink-cursor`
+- **Dépôt** : [github.com/Morglaf/einkcursor](https://github.com/Morglaf/einkcursor)
+- **Licence** : MIT — [LICENSE](LICENSE)
+- **Réseau** : non — fonctionnement 100 % local
+- **Télémétrie / mise à jour auto** : non
+- **Release** : `.\Release-Plugin.ps1`

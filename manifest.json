@@ -4,6 +4,7 @@
 	"version": "1.0.0",
 	"minAppVersion": "1.6.7",
 	"description": "Static cursor for e-ink displays. No settings, no animations.",
-	"author": "You",
+	"author": "l'Atelier",
+	"authorUrl": "https://atelier.atechnologie.fr/activites/programmation-doutils/",
 	"isDesktopOnly": false
 }

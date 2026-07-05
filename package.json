@@ -1,0 +1,11 @@
+{
+	"name": "eink-cursor",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Curseur statique pour écrans e-ink. Sans réglages ni animations.",
+	"main": "main.js",
+	"scripts": {
+		"build": "node -e \"require('fs').accessSync('main.js')\""
+	},
+	"license": "MIT"
+}
