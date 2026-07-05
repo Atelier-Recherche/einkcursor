@@ -95,8 +95,13 @@ if (-not $SkipBuild) {
 if ($LASTEXITCODE -eq 0) { throw "Tag $newVersion existe déjà." }
 
 & git add package.json manifest.json versions.json styles.css main.js $ReleaseNotesFile
+if ($LASTEXITCODE -ne 0) { throw "git add a échoué." }
+
 & git commit -m "release(plugin): $newVersion"
+if ($LASTEXITCODE -ne 0) { throw "git commit a échoué." }
+
 & git tag -a $newVersion -m $newVersion
+if ($LASTEXITCODE -ne 0) { throw "git tag a échoué." }
 
 if ($NoPush) { Write-Host "Release $newVersion préparée (-NoPush)." -ForegroundColor Green; exit 0 }
 

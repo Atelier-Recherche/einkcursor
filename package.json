@@ -1,6 +1,6 @@
 {
 	"name": "eink-cursor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"private": true,
 	"description": "Curseur statique pour écrans e-ink. Sans réglages ni animations.",
 	"main": "main.js",

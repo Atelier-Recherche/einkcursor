@@ -1,7 +1,7 @@
 {
 	"id": "eink-cursor",
 	"name": "Eink Cursor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.6.7",
 	"description": "Static cursor for e-ink displays. No settings, no animations.",
 	"author": "l'Atelier",
