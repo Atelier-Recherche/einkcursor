@@ -1,3 +1,3 @@
-# Eink Cursor 1.0.1
+# Eink Cursor 1.0.2
 
-013e59b Add release infrastructure and Obsidian store compliance
+d0afc3e fix(ci): checkout explicite et npm run build avant release
