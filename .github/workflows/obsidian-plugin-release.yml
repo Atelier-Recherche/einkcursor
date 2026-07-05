@@ -16,9 +16,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Verify plugin bundle (main.js versionné)
+        run: npm run build
 
       - name: Verify artefacts
         run: |
+          ls -la
           test -f main.js
           test -f manifest.json
           test -f styles.css

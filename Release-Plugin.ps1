@@ -84,7 +84,7 @@ $lastTag = $null
 $describeResult = & git describe --tags --abbrev=0 --match '[0-9]*.[0-9]*.[0-9]*' 2>&1
 if ($LASTEXITCODE -eq 0) { $lastTag = ($describeResult | Out-String).Trim() }
 $logLines = if ($lastTag) { & git log "$lastTag..HEAD" --oneline 2>&1 } else { & git log --oneline -n 30 2>&1 }
-Set-Utf8NoBomFile -Path $ReleaseNotesFile -Content ("# $ReleaseNotesTitle $newVersion`n`n" + ($logLines | Out-String).Trim() + "`n")
+Set-Utf8NoBomFile -Path (Join-Path $repoRoot $ReleaseNotesFile) -Content ("# $ReleaseNotesTitle $newVersion`n`n" + ($logLines | Out-String).Trim() + "`n")
 
 if (-not $SkipBuild) {
     & npm run build
